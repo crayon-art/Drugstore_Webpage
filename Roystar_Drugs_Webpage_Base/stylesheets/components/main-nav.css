@@ -1,0 +1,16 @@
+.main{
+    display: flex;
+    justify-content: space-around;
+}
+
+.main ul{
+    display: flex;
+}
+
+.main ul li{
+    font-size: 12px;
+    line-height:12px ;
+    margin-right: 70px;
+    font-weight: 700;
+    padding: 10px;
+}

@@ -1,0 +1,219 @@
+/* Your code here */
+.main-content{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "col1row1 col2row1"
+    "col1row2 col2row2";
+}
+
+
+.col1row1{
+    grid-area: col1row1;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 5fr;
+    grid-template-areas:
+    "toprow toprow"
+    "row2col1 row2col2";
+}
+
+.col1row2{
+    grid-area: col1row2;
+    display: flex;
+    border-top: 1px solid #e2e2e2;
+}
+
+.main-content_article1{
+    justify-self: flex-start;
+    flex-grow: 1;
+    border-right: 1px solid #e2e2e2;
+}
+
+.main-content_article2{
+    justify-self: flex-end;
+    flex-grow: 1;
+    padding-left: 10px;
+}
+
+.main-content_Opinions{
+    grid-area: col2row1;
+    border-left: 1px solid #e2e2e2;
+    padding-left: 10px;
+}
+
+.main-content_Discoveries{
+    grid-area: col2row2;
+}
+
+.col1row1>.main-content_title{
+    grid-area: toprow;
+}
+
+.col1row1>.main-content_mainArticle{
+    grid-area: row2col1;
+    font-size: 11px;
+    justify-self: start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.col1row1>.main-content_video{
+    grid-area: row2col2;
+    background-color: white;
+    padding-bottom: 10px;
+}
+
+.main-content_title{
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 700;
+    justify-self: left;
+    align-self: center;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.article__header{
+    align-self: flex-start;
+    padding: 0;
+    margin: 0;
+}
+
+.article__title{
+    font-size: 18px;
+    font-weight: 700;
+    font-style: italic;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.article__byline{
+    font-size: 12px;
+    font-variant-caps: normal;
+    color: #999;
+    padding-bottom: 10px;
+}
+
+.main-content_video{
+    font-size: 12px;
+}
+
+article > p{
+    font-size: 11px;
+}
+
+.Opinions{
+    font-size: 24px;
+    font-weight: 700;
+    font-style: italic;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.comments{
+    color: #326891;
+    padding-top: 20px;
+    font: 12px;
+}
+
+.main-content_Discoveries{
+    border-left: 1px solid #e2e2e2;
+    border-top: 1px solid #e2e2e2;
+    padding-left: 10px;
+    margin-bottom: 0;
+}
+
+.comments0{
+    color: #326891;
+    padding-top: 0px;
+    font: 12px;
+}
+
+.comments1{
+    color: #326891;
+    padding-top: 5px;
+    font: 12px;
+}
+
+@media screen and (max-width: 1200px){
+
+    .main-content_Discoveries {
+    display: none;
+  }
+  .main-content_Opinions {
+    display: none;
+  }
+    .main-content {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr; /* Adjust the grid template for a single column layout */
+        grid-template-rows: auto auto; /* Adjust the grid template rows as needed */
+        grid-template-areas:
+          "col1row1"
+          "col1row2";
+      }
+
+      .col1row1 {
+        display: grid;
+        grid-template-columns: 1fr; /* Adjust the grid template for a single column layout */
+        grid-template-rows: auto auto; /* Adjust the grid template rows as needed */
+        grid-template-areas:
+          "toprow"
+          "row2col1"
+          "row2col2";
+      }
+
+      .col1row1 > .main-content_title,
+      .col1row1 > .main-content_mainArticle,
+      .col1row1 > .main-content_video {
+        justify-self: center; /* Adjust alignment as needed */
+      }
+
+}
+
+
+@media screen and (max-width: 1000px){
+
+    .main-content_Discoveries {
+    display: none;
+  }
+  .main-content_Opinions {
+    display: none;
+  }
+
+  .interests-bar{
+    display:none;
+  }
+
+
+    .main-content {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr; /* Adjust the grid template for a single column layout */
+        grid-template-rows: auto auto; /* Adjust the grid template rows as needed */
+        grid-template-areas:
+          "col1row1"
+          "col1row2";
+      }
+
+      .col1row1 {
+        display: grid;
+        grid-template-columns: 1fr; /* Adjust the grid template for a single column layout */
+        grid-template-rows: auto auto; /* Adjust the grid template rows as needed */
+        grid-template-areas:
+          "toprow"
+          "row2col1"
+          "row2col2";
+      }
+
+      .col1row1 > .main-content_title,
+      .col1row1 > .main-content_mainArticle,
+      .col1row1 > .main-content_video {
+        justify-self: center; /* Adjust alignment as needed */
+      }
+
+}

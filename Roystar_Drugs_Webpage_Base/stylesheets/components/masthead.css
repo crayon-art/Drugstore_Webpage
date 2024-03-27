@@ -1,0 +1,113 @@
+/* Your code here */
+.masthead{
+    text-align: center;
+    display:grid;
+    width: 100%;
+    grid-auto-flow: row;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+    "menu_and_search  .  action_buttons"
+    "little_technologies little_technologies little_technologies"
+    "date logo NYTimes";
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.masthead__menu-and-search{
+    grid-area: menu_and_search;
+    display: inline-flex;
+    width: fit-content;
+    padding-left: 20px;
+    justify-self: start;
+}
+
+.masthead__actions{
+    grid-area: action_buttons;
+    display: inline-flex;
+    width: fit-content;
+    padding-left: 20px;
+    justify-self: end;
+    padding-top: 8px;
+}
+
+.masthead__technologies{
+    grid-area: little_technologies;
+    border-bottom: 1px solid #e2e2e2;
+    display: flex;
+    justify-content: center;
+}
+
+.masthead__date{
+    grid-area: date;
+    font-size: 11px;
+    display: flex;
+    align-items: flex-end;
+    padding:11px;
+}
+
+.masthead__logo{
+    grid-area: logo;
+    justify-self: end;
+    padding:11px;
+}
+.masthead__NYTimes{
+    grid-area: NYTimes;
+    font-size: 11px;
+    justify-self: end;
+    width: fit-content;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding:11px;
+}
+
+.masthead_menu{
+    font-size: 11px;
+    padding: 7px 9px;
+}
+
+.masthead_search{
+    font-size: 11px;
+    padding: 7px 9px;
+}
+
+.masthead_menu:hover{
+    background-color: #f7f7f5;
+}
+
+.masthead_search:hover{
+    background-color: #f7f7f5;
+}
+
+.masthead_settings{
+    font-size: 14px;
+    padding: 7px 9px;
+}
+.masthead_settings:hover{
+    background-color: #f7f7f5;
+}
+
+.masthead_tech_fb{
+    font-size: 12px;
+    color: #6f6f6f;
+    margin-right: 50px;
+}
+
+.masthead_tech_cb{
+    font-size: 12px;
+    color: #6f6f6f;
+    margin-right: 50px;
+}
+
+.masthead_tech_map{
+    font-size: 12px;
+    color: #6f6f6f;
+    margin-right: 50px;
+}
+
+.masthead__technologies>div{
+    border: 1px solid #e2e2e2;
+    position:relative;
+    top: 1px;
+    background-color: white;
+}
