@@ -215,5 +215,60 @@ article > p{
       .col1row1 > .main-content_video {
         justify-self: center; /* Adjust alignment as needed */
       }
+}
 
+@media screen and (max-width: 800px){
+    .main-content_Discoveries {
+        display: none;
+      }
+      .main-content_Opinions {
+        display: none;
+      }
+
+      .interests-bar{
+        display:none;
+      }
+
+.main-content_title{
+    font-size: 21px;
+}
+
+        .main-content {
+            display: grid;
+            width: 100%;
+            grid-template-columns: 1fr; /* Adjust the grid template for a single column layout */
+            grid-template-rows: auto auto; /* Adjust the grid template rows as needed */
+            grid-template-areas:
+              "col1row1"
+              "col1row2";
+          }
+
+          .col1row1 {
+            display: grid;
+            grid-template-columns: 1fr; /* Adjust the grid template for a single column layout */
+            grid-template-rows: auto auto; /* Adjust the grid template rows as needed */
+            grid-template-areas:
+              "toprow"
+              "row2col1"
+              "row2col2";
+          }
+
+          .col1row1 > .main-content_title,
+          .col1row1 > .main-content_mainArticle,
+          .col1row1 > .main-content_video {
+            justify-self: center; /* Adjust alignment as needed */
+          }
+
+          .col1row2{
+            flex-direction: column;
+          }
+
+          .main-content_article1{
+            border-right: none;
+            border-bottom: 1px solid #e2e2e2;;
+          }
+          .main-content_article2{
+            padding-left: 0;
+            padding-top: 10px;
+          }
 }

@@ -111,3 +111,50 @@
     top: 1px;
     background-color: white;
 }
+
+@media screen and (max-width: 800px){
+    .masthead__logo{
+        grid-area: logo;
+        justify-self: center;
+        padding:11px;
+        height: max-content;
+        width: 350px;
+    }
+
+    .masthead__NYTimes{
+        grid-area: NYTimes;
+        font-size: 11px;
+        justify-self: end;
+        width: fit-content;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding:11px;
+        padding-right: 80px;
+    }
+
+.masthead__actions{
+    grid-area: action_buttons;
+    display: inline-flex;
+    padding-left: 20px;
+    padding-right: 10px;
+    justify-self: center;
+    padding-top: 8px;
+    height: 100%;
+    width:100%;
+    }
+
+    .masthead_sub{
+        justify-self: flex-start;
+        font-size: 10px;
+        height: auto;
+        width:max-content ;
+    }
+
+.masthead_login{
+justify-self: flex-end;
+height: auto;
+width:max-content ;
+}
+
+}
